@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: practice-project
+  datasource:
+    url: jdbc:postgresql://localhost:5432/exampledb
+    username: exampleuser
+    password: examplepass
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: ["health", "prometheus" ]
+app:
+  logging:
+    aspect:
+      enabled: true
